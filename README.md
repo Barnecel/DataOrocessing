@@ -1,2 +1,2 @@
 # DataOrocessing
-These files are for initial image processing
+These files are for initial images processing
