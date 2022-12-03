@@ -1,0 +1,16 @@
+coco数据制作过程：
+    1、使用labelme标注图片
+    2、检查标注图片
+        /home/p/code/miqi/code/fuzhiFrequent/keyPointCheck01Rst.py
+        /home/p/code/miqi/code/fuzhiFrequent/keyPointCheck02SlcErr.py
+    3、对文件夹数据做合并        
+        /home/p/code/miqi/code/fuzhiFrequent/keyPointTrain05MergeDir.py
+    4、转化成我们需要大小的图片(可以不做)
+        /home/p/code/miqi/code/fuzhiFrequent/keyPointTrain06Resize.py
+    5、转化成cocoPoint格式的json：
+        /home/p/code/miqi/prepare_detection_dataset/labelme2coco.py
+    6、合并cocoPoint关键点格式的数据的json                        
+        /home/p/code/miqi/code/fuzhiFrequent/keyPointMergeJson.py
+    7、cocoPoint格式的json给openpose使用或者litepose使用：
+        openpose：/home/p/code/openpose/kzt/scripts/prepare_train_labels_self.py
+        litepose：直接使用
